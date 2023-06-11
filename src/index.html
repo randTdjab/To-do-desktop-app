@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+      <div id="PagesBar"> 
+        <div class="Header">
+          <img src="Resources/imgs/LogoTest.png" alt="">
+          <div class="Info">
+            <h1>Djbare Abderahmane</h1>
+            <p>ab0902dou@gmail.com</p>
+          </div>
+        </div>
+        <div class="Buttons">
+          <h1><span class="icon-Home"></span>Home</h1>
+          <h1><span class="icon-Sun"></span>My day</h1>
+          <h1><span class="icon-Habits"></span>Habits</h1>
+          <h1><span class="icon-Calendar"></span>Calendar</h1>
+          <h1><span class="icon-Goals"></span>My Goals</h1>
+        </div>
+      </div>
+      <div id="Pages">
+        <div  Class="TaskGoalList" id="MyDay">
+          <div class="Header">
+            <h1>My Day</h1>
+            <p>22 Augest 2022</p>
+          </div>
+          <div class="TaskListsContainer">
+            <div class="TaskList">
+            </div>
+            <div class="FinishedTasksList">
+              <div class="FinishButton"><span class="icon-Arrow"></span>Finished Tasks</div>
+            </div>
+          </div>
+          <div class="TaskAppender">
+            <span class="icon-Plus"></span>
+            <input placeholder="Add a Task" type="text">
+            <span class="icon-Settings"></span>
+            <span class="icon-Goals"></span>
+            <span class="icon-Time"></span> 
+          </div>
+        </div>
+        <div id="MyGoals">
+          <div class="Header">
+            <input placeholder="Add a Goal Category" type="text" name="" id="">
+            <h1> <span class="icon-Goals"></span> My Goals</h1>
+            <h2> <span class="icon-Arrow"></span> Filter</h2>
+          </div>
+          <div id="GoalsCategoriesContainer">
+            <div class="GoalCategory">
+                <div class="header">
+                  <h1>GameDev</h1>
+                  <hr>
+                </div>
+                <div class="GoalsListContainer">
+
+                </div>
+                <div class="GoalInputBtn">
+                  <div class="GoalInput">
+                    <span class="icon-Plus"></span>
+                    <input placeholder="Add a Goal" type="text">
+                    <span class="icon-Settings"></span>
+                    <span class="icon-Calendar"></span>
+                  </div>
+                  <div class="FinishedGoals">Finished Goals</div>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div  Class="TaskGoalList" id ="GoalCategoryGoalList">
+          <div class="Header">
+            <h1>My Day</h1>
+          </div>
+          <div class="TaskListsContainer">
+            <div class="TaskList">
+            </div>
+            <div class="FinishedTasksList">
+              <div class="FinishButton"><span class="icon-Arrow"></span>Finished Tasks</div>
+            </div>
+          </div>
+          <div class="TaskAppender">
+            <span class="icon-Plus"></span>
+            <input placeholder="Add a Task" type="text">
+            <span class="icon-Settings"></span>
+            <span class="icon-Goals"></span>
+            <span class="icon-Time"></span> 
+          </div>
+        </div>
+      </div>
+      <div id="PopuPs">
+        <div id="TaskParameters">
+          <div class="LeftSide">
+            <textarea class="TaskName" name="" id="" cols="60" rows="1"></textarea>
+            <textarea class="TaskNote" placeholder="Add a Note" class="Notes" name="" id="" cols="60" rows="6"></textarea>
+          </div>
+          <div class="RightSide">
+            <div class="Buttons">
+              <div><span class="icon-Calendar"></span>Due Date</div>
+              <div><span class="icon-Time"></span>Time</div>
+              <div><span class="icon-Trash"></span>Delete</div>
+            </div>
+            <div class="Details">
+              <h1>Details</h1>
+              <div>work Time : <span>2h</span></div>
+              <div>sessions number : <span>5</span></div>
+            </div>
+            <div class="TimeDate">
+              <h1>22 Augest 2022</h1>
+              <hr>
+              <div class="Time">
+                <div class="StartFinish">
+                  <p>Start Time</p  >
+                  <div class="Box">
+                    <input maxlength="2" type="text">
+                    <p> : </p>
+                    <input maxlength="2" type="text">
+                  </div>
+                </div>
+                <div class="StartFinish">
+                  <p>Finish Time</p  >
+                  <div class="Box">
+                    <input maxlength="2" type="text">
+                    <p> : </p>
+                    <input maxlength="2" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <span class="icon-X"></span>
+        </div>
+        <div id="GoalType">
+          <span class="icon-X"></span>
+          <h1>List</h1>
+          <h1>Project</h1>
+        </div>
+      </div>
+      <div id="Samples">
+        <div class="Task">
+          <div class="CheckBox"></div>
+          <div class="Info">
+            <div class="Title">
+              <h1>Design the to do app n</h1>
+            </div>
+            <div class="Details">
+              <div>
+                <p>#Programing</p>
+              </div>
+              <div>
+                <p>Notes :</p>
+              </div>         
+            </div>
+          </div>
+          <div class="Buttons">
+            <span class="icon-Time"></span>
+            <span class="icon-Trash"></span>
+          </div>
+        </div>
+        <div class="GoalCategory">
+          <div class="header">
+            <h1>GameDev</h1>
+            <hr>
+          </div>
+          <div class="GoalsListContainer">
+          </div>
+          <div class="GoalInputBtn">
+            <div class="GoalInput">
+              <span class="icon-Plus"></span>
+              <input placeholder="Add a Goal" type="text">
+              <span class="icon-Settings"></span>
+              <span class="icon-Calendar"></span>
+            </div>
+            <div class="FinishedGoals">Finished Goals</div>
+          </div>
+      </div>
+      <div class="Goal">
+        <div class="CheckBox"></div>
+        <div class="Info">
+          <div class="Title">
+            <h1>This Is tehHFHHHHHHHHHHHHHHHHHHHHHHHHHHHH </h1>
+          </div>
+          <div class="Details">
+            <div>
+              <p>#Programing</p>
+            </div>
+            <div>
+              <p>Notes :</p>
+            </div>         
+          </div>
+        </div>
+        <div class="Buttons">
+          <span class="icon-Calendar"></span>
+          <span class="icon-Trash"></span>
+        </div>
+      </div>
+      </div>
+    <script src="app.js"></script>
+  </body>
+</html>

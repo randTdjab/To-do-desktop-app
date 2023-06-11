@@ -1,0 +1,717 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+:root{
+  --m_color : white;
+  --s_color : #2b2b2b;
+  --h_color : #7700C9;
+}
+body {
+  display: flex;
+  flex-direction: row;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
+
+
+
+
+
+/* Icons Fonts */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('Resources/fonts/IconFonts/icomoon.eot?98fns4');
+  src:  url('Resources/fonts/IconFonts/icomoon.eot?98fns4#iefix') format('embedded-opentype'),
+    url('Resources/fonts/IconFonts/icomoon.ttf?98fns4') format('truetype'),
+    url('Resources/fonts/IconFonts/icomoon.woff?98fns4') format('woff'),
+    url('Resources/fonts/IconFonts/icomoon.svg?98fns4#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-Plus:before {
+  content: "\e90b";
+}
+.icon-Sun:before {
+  content: "\e90a";
+}
+.icon-Arrow:before {
+  content: "\e900";
+}
+.icon-Calendar:before {
+  content: "\e901";
+}
+.icon-Check:before {
+  content: "\e902";
+}
+.icon-Goals:before {
+  content: "\e903";
+}
+.icon-Habits:before {
+  content: "\e904";
+}
+.icon-Home:before {
+  content: "\e905";
+}
+.icon-Settings:before {
+  content: "\e906";
+}
+.icon-Time:before {
+  content: "\e907";
+}
+.icon-Trash:before {
+  content: "\e908";
+}
+.icon-X:before {
+  content: "\e909";
+}
+
+
+
+
+/*Pages Bar Styling*/
+
+#PagesBar{
+  background-color: var(--s_color);
+  color: var(--m_color);
+  height: 100vh;
+  width: 20%;
+}
+    /*Pages Bar Header Styling*/
+#PagesBar .Header{
+  margin: 1.5vw;  
+  display: flex;
+  align-items: center;
+}
+#PagesBar .Header img{
+  width: 5vw;
+  height: 5vw;
+}
+#PagesBar .Header{
+  margin-left: 1vw;
+}
+#PagesBar .Header .Info h1{
+  margin-left: 1vw;
+  font-size: 1.25vw;
+}
+#PagesBar .Header .Info p{
+  margin-left: 2vw;
+  font-size: 1vw;
+  opacity: 0.5;
+}
+
+    /* page Bar Buttons Styling */
+.Buttons{
+  margin-top: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Buttons h1{
+  border-radius: 10px;
+  padding: 0.5vw;
+  margin-bottom: 0.5vw;
+  font-size: 1.5vw;
+}
+.Buttons h1 span{
+  margin-right: 0.25vw;
+}
+
+.Buttons h1:hover{
+  cursor:pointer;
+  background-color: var(--h_color) ;
+}
+
+
+
+
+
+
+/* Pages Container */
+
+#Pages{
+  width: 80%;
+  background-color: var(--h_color);
+  color: white;
+}
+
+
+
+
+
+
+/* MY Day Page */
+.TaskGoalList{
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.TaskGoalList .Header{
+  margin-bottom: 2vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.TaskGoalList .Header h1{
+  font-size: 3vw;
+}
+.TaskGoalList .Header p{
+  font-size: 1.4vw;
+  opacity: 0.6;
+}
+
+
+/* Tasks Styling */
+
+
+
+.TaskListsContainer{
+  overflow: scroll;
+  width: 50vw;
+  height: 70vh;
+}
+.TaskListsContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.Task{
+  background-color: var(--s_color);
+  border-radius: 5px;
+  margin-bottom: 0.5vw;
+  width: 100%;
+  height: 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.Task .CheckBox{
+  margin-left: 1vw;
+  border: 0.3vw solid var(--m_color);
+  border-radius: 50%;
+  width: 1.5vw;
+  height: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Task .Info{
+  padding: 0.1vw;
+  max-width : 65% ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.Task .Info h1{
+  text-align: center;
+  font-size: 1.25vw;
+}
+.Task .Info .Details{
+  margin-left: 1vw;
+  font-size: 0.75vw;
+  display: flex;
+}
+.Task .Info .Title{ 
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Task .Details div{
+  margin-right: 1vw;
+}
+.Task .Details div:first-child {
+  max-width: 8vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Task .Details div:nth-child(2){
+  max-width: 20vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Task .Details div:first-child p{
+  text-overflow: ellipsis;
+  color: yellow;
+}
+.Task .Details div:nth-child(2) p{
+  text-overflow: ellipsis;
+  opacity: 0.6;
+}
+.Task .Buttons{
+  margin: 1vw;
+  display: flex;
+  flex-direction: row;
+}
+.Task .Buttons span{
+  font-size: 2vw;
+}
+
+.TaskList{
+  margin-bottom: 1vw;
+}
+.FinishedTasksList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.FinishButton{
+  background-color: var(--m_color);
+  color: var(--s_color);
+  border-radius: 5vw;
+  font-size: 1.1vw;
+  margin-bottom: 1vw;
+  padding: 0.25vw;
+  width: fit-content;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.FinishButton span{
+  font-size: 2vw;
+  -webkit-transform: rotate(90deg);
+}
+.TaskAppender{
+  margin-top: 2vw;
+  background-color: var(--s_color);
+  border-radius: 5vw;
+  width: 55%;
+  height: 3.5vw;
+  display: flex;
+  align-items: center;
+}
+
+.TaskAppender .icon-Plus{
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+.TaskAppender span{
+  font-size: 2.25vw;
+}
+.TaskAppender input{
+  font-size: 1.5vw;
+  color: var(--m_color);
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+  background-color: transparent;
+  height: 70%;
+  width: 70%;
+}
+.TaskAppender input::placeholder{
+  opacity: 0.9;
+  font-size: 1.25vw;
+  color: var(--m_color);
+}
+
+
+/* Task Parameters Styling */
+
+#PopuPs{
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100vw;
+}
+
+#TaskParameters{
+  position: absolute;
+  top: 7%;
+  left: 20%;
+  background-color: var(--s_color);
+  border : 0.25vw solid var(--m_color);
+  border-radius: 2vw;
+  width: 70vw;
+  height: 80vh;
+  display: none;
+}
+#TaskParameters .LeftSide{
+  margin-top: 0.5vw;
+  margin-left: 2vw;
+}
+#TaskParameters .LeftSide textarea{
+  /*height: 3vw;*/
+}
+#TaskParameters .LeftSide textarea:first-child{
+  padding: 0.5vw;
+  box-sizing: border-box;
+  outline: none;
+  overflow: hidden;
+  resize: none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  border: none;
+  color: var(--m_color);
+  font-size: 1.5vw;
+  border-left: 1vw solid var(--m_color) ;
+  background-color: transparent;
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+}
+
+#TaskParameters .LeftSide textarea:nth-child(2){
+  border-radius: 1vw;
+  color: var(--s_color);
+  height: auto; 
+  margin-top: 1vw;
+  margin-left: 2vw;
+  padding: 0.5vw;
+  outline: none;
+  overflow: hidden;
+  resize: none;
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+}
+
+#TaskParameters .RightSide{
+  color: white;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#TaskParameters .RightSide .Buttons {
+  color: var(--s_color);
+  margin-top: 5vw;
+}
+#TaskParameters .RightSide .Buttons div{
+
+  margin-bottom: 1vw;
+  background-color: var(--m_color);
+  font-size: 1.5vw;
+  padding: 0.5vw;
+  border-radius: 5vw;
+  display: flex;
+  align-items: center;
+
+}
+#TaskParameters .RightSide .Buttons div span{
+  font-size: 1.5vw;
+}
+#TaskParameters .RightSide .Details{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2vw;
+}
+#TaskParameters .RightSide h1{
+  margin-bottom: 0.25vw;
+  font-size: 1.75vw;
+}
+#TaskParameters .RightSide div{
+  font-size: 1vw;
+}
+
+.TimeDate hr{
+  margin-bottom: 0.5vw;
+  background-color: var(--m_color);
+  height:0.15vw;
+}
+
+#TaskParameters .RightSide .TimeDate .Time .StartFinish{
+  font-size: 1.5vw;
+  margin-bottom: 1vw;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+} 
+#TaskParameters .RightSide .TimeDate .Time .StartFinish p:nth-child(1){
+  font-size: 1.25vw;
+}
+
+#TaskParameters .RightSide .TimeDate .Time  .Box{
+  font-size: 1.5vw;
+  padding: 0.25vw;
+  border: 0.25vw solid var(--m_color);
+  border-radius: 0.25vw;
+  display: flex;
+} 
+#TaskParameters .RightSide .TimeDate .Time  .Box input{
+  color: var(--m_color);
+  font-size: 1.5vw;
+  width: 2vw;
+  height: 100%;
+  background-color: transparent;
+}
+#TaskParameters .RightSide .TimeDate .Time  .Box p:first-child{
+  margin-left: 0.25vw;
+  margin-right: 0.25vw;
+} 
+
+.icon-X{
+  font-size: 2vw;
+  position: absolute;
+  top: 2%;
+  left:95%;
+  color: white;
+}
+
+
+#Samples{
+  display: none;
+}
+
+/* My Goals */
+#MyGoals{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#MyGoals .Header{
+  width: 100%;
+  margin: 1.25vw;
+  display: flex;
+  justify-content: space-between; 
+}
+
+#MyGoals .Header input{
+  color: var(--m_color);
+  padding: 0.25vw;
+  font-size: 1.5vw;
+  background-color: transparent;
+  border-left: 1vw solid var(--m_color);
+}
+#MyGoals .Header h1{
+  position: absolute;
+  left: 53%;
+}
+#MyGoals .Header input::placeholder{
+  color: rgba(255, 255, 255, 0.726);
+}
+
+#GoalsCategoriesContainer{
+  display: grid;
+  overflow: scroll;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:0px;
+  margin-top: 1vw;
+  margin-left: 2vw;
+  width: 75vw;
+  height: 84vh;
+}
+#GoalsCategoriesContainer::-webkit-scrollbar{
+  display: none;
+}
+
+.GoalCategory{
+  position: relative;
+  background-color: rgb(250, 23, 61);
+  border-radius: 2vw;
+  margin-bottom: 1vw;
+  width: 95%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 5px solid var(--s_color) ;
+}
+.GoalCategory .header{
+  cursor:pointer;
+  margin-bottom: 1vw;
+  color: var(--s_color);
+}
+.GoalCategory hr{
+  height: 0.5vw;
+  background-color:var(--s_color);
+  border : none;
+}
+.GoalsListContainer{
+  width: 90%;
+}
+.GoalInputBtn{
+  position: absolute;
+  top: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.GoalInputBtn .GoalInput{
+  font-size: 2vw;
+  margin-bottom: 1vw;
+  width: 25vw;
+  height: 3.5vw;
+  border-radius: 5vw;
+  background-color: var(--s_color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.GoalInputBtn .GoalInput input{
+  background-color: transparent;
+  color: white;
+  margin-left: 0.25vw;
+  font-size: 1.5vw;
+  width: 70%;
+}
+.GoalInputBtn .GoalInput input::placeholder{
+  color:rgba(255, 255, 255, 0.932);
+}
+.GoalInputBtn .FinishedGoals{
+  font-size: 1.5vw;
+  padding: 0.5vw;
+  border-radius: 5vw;
+  background-color: var(--s_color);
+}
+.Goal{
+  background-color: var(--s_color);
+  border-radius: 5px;
+  margin-bottom: 0.5vw;
+  width: 33vw;
+  height: 3.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.Goal .CheckBox{
+  margin-left: 1vw;
+  border: 0.3vw solid var(--m_color);
+  border-radius: 50%;
+  width: 1.5vw;
+  height: 1.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Goal .Info{
+  padding: 0.1vw;
+  width : 65% ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+.Goal .Info h1{
+  text-align: center;
+  font-size: 1.25vw;
+}
+.Goal .Info .Details{
+  margin-left: 1vw;
+  font-size: 0.75vw;
+  display: flex;
+}
+.Goal .Info .Title{ 
+  width: 95%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Goal .Info .Title h1{ 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Goal .Details div{
+  margin-right: 1vw;
+}
+.Goal .Details div:first-child {
+  max-width: 8vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Goal .Details div:nth-child(2){
+  max-width: 20vw;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.Goal .Details div:first-child p{
+  text-overflow: ellipsis;
+  color: yellow;
+}
+.Goal .Details div:nth-child(2) p{
+  text-overflow: ellipsis;
+  opacity: 0.6;
+}
+.Goal .Buttons{
+  margin: 1vw;
+  display: flex;
+  flex-direction: row;
+}
+.Goal .Buttons span{
+  font-size: 2vw;
+}
+
+
+/* pop ups styling */
+
+#PopuPs{
+  display: none;
+}
+#GoalType{
+  background-color: var(--s_color);
+  width: 40vw;
+  height: 50vh;
+  border-radius: 1vw;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  display: none;
+  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
+#GoalType h1{
+  color: var(--s_color);
+  background-color: white;
+  padding: 0.5vw;
+  cursor: pointer;
+  border-radius: 1vw;
+}
+
+
+
+
+/* Hover Effects */
+.Task span:hover{
+  color: var(--h_color);
+}
+.Goal span:hover{
+  color: var(--h_color);
+}
+.TaskAppender span:hover{
+  color: var(--h_color);
+}
+.GoalInput span:hover{
+  color: var(--h_color);
+}
+
+/* gloabal input styling */
+input{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  outline: none;
+  border: none;
+}
